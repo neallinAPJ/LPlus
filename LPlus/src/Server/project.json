@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
 
   "dependencies": {
@@ -6,7 +6,8 @@
     "Dapper": "1.50.1",
     "SapientGuardian.MySql.Data": "6.9.812",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Model": "1.0.0-*"
+    "Model": "1.0.0-*",
+    "Microsoft.AspNetCore.Identity": "1.0.0"
   },
 
   "frameworks": {

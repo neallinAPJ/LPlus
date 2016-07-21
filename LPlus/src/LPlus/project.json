@@ -20,7 +20,10 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
     "Model": "1.0.0-*",
-    "Server": "1.0.0-*"
+    "Server": "1.0.0-*",
+    "Common": "1.0.0-*",
+    "Microsoft.AspNetCore.Identity": "1.0.0",
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0"
   },
 
   "tools": {

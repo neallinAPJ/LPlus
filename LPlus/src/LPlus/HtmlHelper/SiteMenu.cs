@@ -42,7 +42,7 @@ namespace LPlus.HtmlHelper
         private static TagBuilder GetTagLI(IHtmlHelper htmlHelper, MenuModel menu, string area, string controller, string action, int menuLevel, string resourceKey)//, int companyId
         {
             TagBuilder LiTag = new TagBuilder("li");
-            LiTag.AddCssClass("nav-parent");
+            
             StringBuilder LiInnerHtml = new StringBuilder(200);
 
             TagBuilder aTag = new TagBuilder("a");
@@ -54,17 +54,12 @@ namespace LPlus.HtmlHelper
             iTag1.AddCssClass(string.Format("fa {0}", menu.MenuIcon));
             TagBuilder spanTag = new TagBuilder("span");
             spanTag.InnerHtml.Append(resourceKey);
-            //TagBuilder iTag2 = new TagBuilder("i");
-            //if (menu.ChildrenMenu != null && menu.ChildrenMenu.Count > 0)
-            //{
-            //    iTag2.AddCssClass("fa fa-angle-left pull-right");
-            //}
             aTag.InnerHtml.AppendHtml(iTag1);
             aTag.InnerHtml.AppendHtml(spanTag);
-            //aTag.InnerHtml.AppendHtml(iTag2);
             LiTag.InnerHtml.AppendHtml(aTag);
             if (menu.ChildrenMenu != null && menu.ChildrenMenu.Count > 0)
             {
+                LiTag.AddCssClass("nav-parent");
                 LiTag.InnerHtml.AppendHtml(GetTagUL(htmlHelper, menu.ChildrenMenu, area, controller, action, menuLevel, resourceKey));
 
             }

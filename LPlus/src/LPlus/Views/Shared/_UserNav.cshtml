@@ -3,7 +3,7 @@
     string UserName = User.Identities.First().IsAuthenticated ? User.Identities.First(u => u.IsAuthenticated).FindFirst(ClaimTypes.Name).Value : string.Empty;
 }
 <button type="button" class="btn btn-logged" data-toggle="dropdown">
-    <img src="images/photos/loggeduser.png" alt="" />
+    <img src="~/images/photos/loggeduser.png" alt="" />
     @UserName
     <span class="caret"></span>
 </button>

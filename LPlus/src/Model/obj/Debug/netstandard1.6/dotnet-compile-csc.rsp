@@ -14,6 +14,8 @@
 -r:"C:\Users\linjianwei\.nuget\packages\System.AppContext\4.1.0\ref\netstandard1.6\System.AppContext.dll"
 -r:"C:\Users\linjianwei\.nuget\packages\System.Collections\4.0.11\ref\netstandard1.3\System.Collections.dll"
 -r:"C:\Users\linjianwei\.nuget\packages\System.Collections.Concurrent\4.0.12\ref\netstandard1.3\System.Collections.Concurrent.dll"
+-r:"C:\Users\linjianwei\.nuget\packages\System.ComponentModel\4.0.1\ref\netstandard1.0\System.ComponentModel.dll"
+-r:"C:\Users\linjianwei\.nuget\packages\System.ComponentModel.Annotations\4.1.0\ref\netstandard1.4\System.ComponentModel.Annotations.dll"
 -r:"C:\Users\linjianwei\.nuget\packages\System.Console\4.0.0\ref\netstandard1.3\System.Console.dll"
 -r:"C:\Users\linjianwei\.nuget\packages\System.Diagnostics.Debug\4.0.11\ref\netstandard1.3\System.Diagnostics.Debug.dll"
 -r:"C:\Users\linjianwei\.nuget\packages\System.Diagnostics.Tools\4.0.1\ref\netstandard1.0\System.Diagnostics.Tools.dll"
@@ -55,3 +57,4 @@
 -r:"C:\Users\linjianwei\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 "F:\个人管理\个人项目\Git\LPlus\LPlus\src\Model\Menu\MenuModel.cs"
 "F:\个人管理\个人项目\Git\LPlus\LPlus\src\Model\Properties\AssemblyInfo.cs"
+"F:\个人管理\个人项目\Git\LPlus\LPlus\src\Model\User\UserModel.cs"
