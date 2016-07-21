@@ -19,5 +19,7 @@ namespace Model.User
         public string EncryptPassword { get; set; }
         public string Adress { get; set; }
         public bool RememberMe { get; set; }
+        public string Pictrue { get; set; }
+        public string Phone { get; set; }
     }
 }

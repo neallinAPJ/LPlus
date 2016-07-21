@@ -187,6 +187,7 @@
 --reference:C:\Users\linjianwei\.nuget\packages\System.Runtime.InteropServices.RuntimeInformation\4.0.0\ref\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll
 --reference:C:\Users\linjianwei\.nuget\packages\System.Runtime.Loader\4.0.0\ref\netstandard1.5\System.Runtime.Loader.dll
 --reference:C:\Users\linjianwei\.nuget\packages\System.Runtime.Numerics\4.0.1\ref\netstandard1.1\System.Runtime.Numerics.dll
+--reference:C:\Users\linjianwei\.nuget\packages\System.Runtime.Serialization.Json\4.0.2\ref\netstandard1.0\System.Runtime.Serialization.Json.dll
 --reference:C:\Users\linjianwei\.nuget\packages\System.Runtime.Serialization.Primitives\4.1.1\ref\netstandard1.3\System.Runtime.Serialization.Primitives.dll
 --reference:C:\Users\linjianwei\.nuget\packages\System.Security.Claims\4.0.1\ref\netstandard1.3\System.Security.Claims.dll
 --reference:C:\Users\linjianwei\.nuget\packages\System.Security.Cryptography.Algorithms\4.2.0\ref\netstandard1.6\System.Security.Cryptography.Algorithms.dll
@@ -210,6 +211,7 @@
 --reference:C:\Users\linjianwei\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\linjianwei\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\linjianwei\.nuget\packages\System.Xml.XmlDocument\4.0.1\ref\netstandard1.3\System.Xml.XmlDocument.dll
+--reference:C:\Users\linjianwei\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll
 --reference:F:\个人管理\个人项目\Git\LPlus\LPlus\src\Common\bin\Debug\netstandard1.6\Common.dll
 --reference:F:\个人管理\个人项目\Git\LPlus\LPlus\src\Model\bin\Debug\netstandard1.6\Model.dll
 --reference:F:\个人管理\个人项目\Git\LPlus\LPlus\src\Server\bin\Debug\netstandard1.6\Server.dll
@@ -219,5 +221,7 @@ F:\个人管理\个人项目\Git\LPlus\LPlus\src\LPlus\Startup.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\LPlus\Areas\AccountManagement\Controllers\AccountController.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\LPlus\Areas\Web\Controllers\NoteController.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\LPlus\Controllers\HomeController.cs
+F:\个人管理\个人项目\Git\LPlus\LPlus\src\LPlus\HtmlHelper\Common.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\LPlus\HtmlHelper\SiteMenu.cs
+F:\个人管理\个人项目\Git\LPlus\LPlus\src\LPlus\ViewComponents\ContactListViewComponent.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\LPlus\ViewComponents\MenuViewComponent.cs

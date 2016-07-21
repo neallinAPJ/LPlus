@@ -10,11 +10,12 @@ namespace Common.Helper
 {
     public class UserHelper
     {
-        public static async Task SignInAsync(UserModel user, bool isPersistent, Microsoft.AspNetCore.Http.HttpContext context)
+        public static async Task SignInAsync(UserModel user, bool isPersistent, HttpContext context)
         {           
             await context.Authentication.SignOutAsync("MyCookieMiddlewareInstance");
             List<Claim> claims = new List<Claim>();
             claims.Add(new Claim(ClaimTypes.Name, user.Name, ClaimValueTypes.String));
+            claims.Add(new Claim("UserID", user.ID.ToString(), ClaimValueTypes.String));
             var userIdentity = new ClaimsIdentity("user");
             userIdentity.AddClaims(claims);
             var userPrincipal = new ClaimsPrincipal(userIdentity);
@@ -30,5 +31,6 @@ namespace Common.Helper
         {
             await context.Authentication.SignOutAsync("MyCookieMiddlewareInstance");
         }
+
     }
 }

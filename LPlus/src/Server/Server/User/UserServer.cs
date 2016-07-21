@@ -26,5 +26,17 @@ namespace Server.Server.User
             }
             return false;
         }
+        public async Task<IEnumerable<UserModel>> GetContactList(int userID)
+        {
+            string queryStr = string.Empty;
+            queryStr = string.Format("select * from User where ID IN(Select FriendID from Friends where UserID={0}) ", userID);
+            return await _context.Connection.QueryAsync<UserModel>(queryStr);
+        }
+        public async Task<IEnumerable<UserModel>> GetCurrentUser(string userName)
+        {
+            string queryStr = string.Format("select * from User where userName='{0}' ", userName);
+
+            return await _context.Connection.QueryAsync<UserModel>(queryStr); ;
+        }
     }
 }

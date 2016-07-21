@@ -1,4 +1,7 @@
-﻿<div class="tab-pane" id="contactmenu">
+﻿@using LPlus.HtmlHelper
+@using Model.User
+@model List<UserModel>
+<div class="tab-pane" id="contactmenu">
     <div class="input-group input-search-contact">
         <input type="text" class="form-control" placeholder="Search contact">
         <span class="input-group-btn">
@@ -6,7 +9,8 @@
         </span>
     </div>
     <h5 class="sidebar-title">My Contacts</h5>
-    <ul class="media-list media-list-contacts">
+    @await Component.InvokeAsync("ContactList")
+    @*<ul class="media-list media-list-contacts">
         <li class="media">
             <a href="#">
                 <div class="media-left">
@@ -117,5 +121,5 @@
                 </div>
             </a>
         </li>
-    </ul>
+    </ul>*@
 </div><!-- tab-pane -->
