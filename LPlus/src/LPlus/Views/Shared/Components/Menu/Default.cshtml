@@ -1,0 +1,9 @@
+﻿@using Microsoft.AspNetCore.Http
+@using Model.Menu
+@using LPlus.HtmlHelper
+@model List<MenuModel>
+
+@inject IHttpContextAccessor context
+
+@Html.Menu(Model, context)
+

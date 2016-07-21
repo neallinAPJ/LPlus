@@ -1,0 +1,17 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "Dapper": "1.50.1",
+    "SapientGuardian.MySql.Data": "6.9.812",
+    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
+    "Model": "1.0.0-*"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}

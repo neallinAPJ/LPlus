@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Server.Server.Menu;
+using Server.DataProvide;
+using Server;
+using Microsoft.AspNetCore.Http;
 
 namespace LPlus
 {
@@ -29,6 +30,10 @@ namespace LPlus
         {
             // Add framework services.
             services.AddMvc();
+            services.AddTransient<IMySqlContext, MySqlContext>();
+            services.AddTransient<IMenuServer, MenuServer>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
