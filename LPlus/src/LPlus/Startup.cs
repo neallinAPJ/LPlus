@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Model.User;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Server.Server.Note;
 
 namespace LPlus
 {
@@ -51,6 +52,7 @@ namespace LPlus
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddTransient<IUserServer, UserServer>();
+            services.AddTransient<INoteServer, NoteServer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

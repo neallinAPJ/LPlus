@@ -3,16 +3,17 @@
 @{
     var returnUrl = ViewBag.ReturnUrl;
 }
+<title>Login</title>
 <div class="sign-overlay"></div>
 <div class="signpanel"></div>
 <div class="panel signin">
     <div class="panel-heading">
-        <h1>Quirk</h1>
+        <h1>LPlus</h1>
         <h4 class="panel-title">Welcome! Please signin.</h4>
     </div>
     <div class="panel-body">
-        <button class="btn btn-primary btn-quirk btn-fb btn-block">Connect with Facebook</button>
-        <div class="or">or</div>
+        @*<button class="btn btn-primary btn-quirk btn-fb btn-block">Connect with Facebook</button>*@
+        @*<div class="or">or</div>*@
         <form asp-action="login" asp-controller="account" asp-area="AccountManagement" method="post" asp-route-returnurl="@returnUrl">
             <div class="form-group mb10">
                 <div class="input-group">
@@ -23,7 +24,7 @@
             <div class="form-group nomargin">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input type="text" class="form-control" asp-for="Password"  placeholder="Enter Password">
+                    <input type="password" class="form-control" asp-for="Password"  placeholder="Enter Password">
                 </div>
             </div>
             <div><a href="" class="forgot">Forgot password?</a></div>
