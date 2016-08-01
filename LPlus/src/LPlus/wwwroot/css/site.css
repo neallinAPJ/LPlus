@@ -29,3 +29,18 @@ textarea {
     display: none
   }
 }
+.rich{
+    color:#000;
+    width:100px;
+}
+.rich:empty:before{
+    content: attr(data-placeholder);
+    color:#bbb;
+}
+.rich:focus:before{
+    content:none;
+}
+.UserPicture{
+    width:80px;
+    height:80px;
+}

@@ -1,17 +1,54 @@
 ﻿@using Model.Note
+@using Common.Helper
+@using Microsoft.AspNetCore.Http
 @model List<NoteModel>
 
+@inject IHttpContextAccessor context
+
+<link rel="stylesheet" href="~/css/comment/myemojiPl.css"/>
+<script type="text/javascript" src="~/lib/comment/myemojiPl.js"></script>
 <ol class="breadcrumb breadcrumb-quirk">
     <li><a asp-action="index" asp-controller="home"><i class="fa fa-home mr5"></i> 主页</a></li>
     <li><a href="buttons.html">测试功能</a></li>
-    <li class="active">L+心情</li>
+    <li class="active">好友圈</li>
 </ol>
 <hr class="darken">
 <div class="row">
     <div class="col-sm-8 col-md-9 col-lg-10">
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img alt="" src="@UserHelper.GetUserPicture(context.HttpContext)" class="media-object img-circle UserPicture">
+                </a>
+            </div>
+            <div class="media-body">
+                @Html.Partial("_CommentPublish", "PublishComment")
+            </div>
+        </div><!-- media -->
+        
+        <br />
         <div class="timeline-wrapper">
             @Html.Partial("_Note",Model)
-            <div class="timeline-date"><a href="">Load more...</a></div>
+            <div class="timeline-date"><a onclick="loadMore()" style="cursor:pointer;" id="loadMore">Load more...</a></div>
         </div><!-- timeline-wrapper -->
     </div>
 </div><!-- row -->
+<input type="hidden" id="pageIndex" value="0"/>
+<script type="text/javascript">
+    var loadMore=function()
+    {
+        var pageIndex = parseInt($("#pageIndex").val()) + 1;
+        $("#pageIndex").val(pageIndex);
+        var url = "@Url.Action("GetNotes", "Note","Web")" + "&pageIndex=" + pageIndex;
+        ajaxMethod.get(url, "", function (result) {
+            if (result == "NULL")
+            {
+                $("#loadMore").html("NULL");
+            }
+            else
+            {
+                $("#timeline-data").append(result);
+            }            
+        });
+    }
+</script>

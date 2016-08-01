@@ -1,0 +1,14 @@
+﻿@model string
+<div class="Main">
+    <div class="Input_Box" id="Input_Box-@Model">
+        <div contenteditable="true" class="Input_text rich" id="Input_text-@Model" data-placeholder="Write some comments"></div>
+        @*<textarea type="" class="form-control Input_text" placeholder="Write some comments" id="commentText-@item.ID"></textarea>*@
+        <div class="Input_Foot" id="Input_Foot-@Model">
+            <a class="imgBtn" id="imgBtn-@Model" onclick="imgBtnClick('@Model')">'◡'</a><a class="postBtn" onclick="writeComment('@Model')">确定</a>
+        </div>
+    </div>
+    <div class="faceDiv" id="faceDiv-@Model">
+        <section class="emoji_container" id="emoji_container-@Model"></section>
+        <section class="emoji_tab" id="emoji_tab-@Model"></section>
+    </div>
+</div>

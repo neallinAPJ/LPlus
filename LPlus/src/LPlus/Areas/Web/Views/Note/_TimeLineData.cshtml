@@ -1,0 +1,64 @@
+﻿@using Model.Note
+@using System.Security.Claims
+@using Common.Helper
+@model IEnumerable<IGrouping<DateTime,NoteModel>>
+
+@foreach (var data in Model)
+{
+
+        <div class="timeline-date">@data.FirstOrDefault().CreateDate.ToString("yyyy-MM-dd")</div>
+        @foreach (var item in data)
+        {
+            <div class="panel panel-post-item status">
+                <div class="panel-heading">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img alt="" src="@item.UserPicture" class="media-object img-circle">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">@item.CreateBy</h4>
+                            <p class="media-usermeta">
+                                <span class="media-time">@item.CreateDate.ToString("HH:mm:ss")</span>
+                                <i class="glyphicon glyphicon-map-marker"></i> <a>@item.Address</a>
+                            </p>
+                        </div>
+                    </div><!-- media -->
+                    <ul class="panel-options">
+                        <li><a class="tooltips" href="" data-toggle="tooltip" title="View Options"><i class="glyphicon glyphicon-option-vertical"></i></a></li>
+                    </ul>
+                </div><!-- panel-heading -->
+                <div class="panel-body">
+                    @Html.Raw(item.Content)
+                </div>
+                <div class="panel-footer">
+                    <ul class="list-inline">
+                        <li><a onclick="like(@item.ID)"><i class="glyphicon glyphicon-heart"></i> Like</a></li>
+                        <li>
+                            <a data-target="#comment-@item.ID" data-toggle="collapse" id="commentOnclick-@item.ID">
+                                <i class="glyphicon glyphicon-comment"></i> Comments (<span id="count-@item.ID">@item.Comments.CountNotNull()</span>)
+                            </a>
+                        </li>
+                        <li class="pull-right"><span id="like-@item.ID">@item.LikeCount</span> liked this</li>
+                    </ul>
+                </div>
+                <div class="collapse" id="comment-@item.ID">
+                    <ul class="media-list">
+                        @if (item.Comments != null)
+                    {
+                        foreach (var comment in item.Comments)
+                        {
+                                @Html.Partial("_Comment", comment)
+                            }
+                        }
+
+                    </ul>
+
+                </div>
+                <div class="form-group">
+                    @Html.Partial("_CommentBoard", item.ID.ToString())
+                </div>
+            </div><!-- panel panel-post -->
+        }
+}

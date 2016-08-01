@@ -84,6 +84,7 @@ namespace LPlus.Controllers
             return View(model);
         }
 
+
         private void ValidateModel(UserModel model)
         {
             if (!model.Password.Equals(model.EncryptPassword))

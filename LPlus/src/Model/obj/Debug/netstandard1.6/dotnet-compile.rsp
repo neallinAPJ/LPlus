@@ -57,6 +57,7 @@
 --reference:C:\Users\linjianwei\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\linjianwei\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\linjianwei\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
+F:\个人管理\个人项目\Git\LPlus\LPlus\src\Model\BaseModel.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\Model\Comment\CommentModel.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\Model\Menu\MenuModel.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\Model\Note\NoteModel.cs

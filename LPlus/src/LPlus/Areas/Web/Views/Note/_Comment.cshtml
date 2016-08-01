@@ -1,0 +1,17 @@
+﻿@using Model.Comment;
+@model CommentModel
+<li class="media" id="media-@Model.ID">
+    <div class="media-left">
+        <a href="#">
+            <img class="media-object img-circle" src="@Model.UserPicture" alt="">
+        </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading">@Model.CreateBy<small>@Model.CreateDate</small></h4>
+        @Html.Raw(Model.Content)
+
+    </div>
+    <div class="media-right">
+        <a class="glyphicon glyphicon-remove" onclick="deleteComment(@Model.ID,@Model.NoteID)"></a>
+    </div>
+</li>

@@ -12,6 +12,7 @@
     <meta name="author" content="" />
     <title>测试L+</title>
     <environment names="Development">
+        <link rel="shortcut icon icon" href="~/images/lexitron.png" />
         <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="~/css/quirk/hover.css" />
         <link rel="stylesheet" href="~/css/quirk/font-awesome.css" />
@@ -20,8 +21,10 @@
         <link rel="stylesheet" href="~/css/quirk/toggles-full.css" />
         <link rel="stylesheet" href="~/css/quirk/morris.css" />
         <link rel="stylesheet" href="~/css/quirk/quirk.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment names="Staging,Production">
+        <link rel="shortcut icon icon" href="~/images/lexitron.png" />
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
@@ -32,10 +35,13 @@
         <link rel="stylesheet" href="~/css/quirk/toggles-full.css" />
         <link rel="stylesheet" href="~/css/quirk/morris.css" />
         <link rel="stylesheet" href="~/css/quirk/quirk.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
     </environment>
 </head>
 <body>
     <environment names="Development">
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2">
+        </script>
         <script src="~/lib/jquery/dist/jquery.js">
         </script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js">
@@ -62,8 +68,12 @@
         </script>
         <script src="~/lib/quirk/dashboard.js">
         </script>
+        <script src="~/js/site.js">
+        </script>
     </environment>
     <environment names="Staging,Production">
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2">
+        </script>
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery">
@@ -93,6 +103,8 @@
         <script src="~/lib/quirk/quirk.js">
         </script>
         <script src="~/lib/quirk/dashboard.js">
+        </script>
+        <script src="~/js/site.js">
         </script>
     </environment>
     <header>
@@ -153,7 +165,7 @@
                     <li class="tooltips unread" data-toggle="tooltip" title="Check Mail"><a data-toggle="tab" data-target="#emailmenu"><i class="tooltips fa fa-envelope"></i></a></li>
                     <li class="tooltips" data-toggle="tooltip" title="Contacts"><a data-toggle="tab" data-target="#contactmenu"><i class="fa fa-user"></i></a></li>
                     <li class="tooltips" data-toggle="tooltip" title="Settings"><a data-toggle="tab" data-target="#settings"><i class="fa fa-cog"></i></a></li>
-                    <li class="tooltips" data-toggle="tooltip" title="Log Out"><a href="signin.html"><i class="fa fa-sign-out"></i></a></li>
+                    <li class="tooltips" data-toggle="tooltip" title="Log Out"><a asp-action="SignOut" asp-controller="Account" asp-area="AccountManagement"><i class="fa fa-sign-out"></i></a></li>
                 </ul>
                 <div class="tab-content">
                     <!-- ################# MAIN MENU ################### -->

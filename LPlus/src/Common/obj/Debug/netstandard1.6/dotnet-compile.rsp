@@ -97,6 +97,7 @@
 --reference:C:\Users\linjianwei\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\linjianwei\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll
 --reference:F:\个人管理\个人项目\Git\LPlus\LPlus\src\Model\bin\Debug\netstandard1.6\Model.dll
+F:\个人管理\个人项目\Git\LPlus\LPlus\src\Common\Helper\CommonHelper.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\Common\Helper\ConverHelper.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\Common\Helper\UserHelper.cs
 F:\个人管理\个人项目\Git\LPlus\LPlus\src\Common\Properties\AssemblyInfo.cs
